@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="JuImageItemCVCell">
+            <rect key="frame" x="0.0" y="0.0" width="147" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="147" height="156"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nQM-dB-7al">
+                        <rect key="frame" x="0.0" y="0.0" width="147" height="156"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkQ-Fq-7LG">
+                        <rect key="frame" x="107" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Hoy-vW-iWl"/>
+                            <constraint firstAttribute="width" secondItem="HkQ-Fq-7LG" secondAttribute="height" multiplier="1:1" id="iH6-3P-zJ5"/>
+                        </constraints>
+                        <state key="normal" image="deleteImage"/>
+                        <connections>
+                            <action selector="JuTouchDeleteImage:" destination="gTV-IL-0wX" eventType="touchUpInside" id="yfX-R2-UIH"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-ti-5hV">
+                        <rect key="frame" x="56" y="61" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="U5O-vc-5JF"/>
+                            <constraint firstAttribute="width" secondItem="NPT-ti-5hV" secondAttribute="height" multiplier="1:1" id="VQu-i3-wTf"/>
+                        </constraints>
+                        <state key="normal" image="addAudio"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nQM-dB-7al" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4jl-dW-46n"/>
+                <constraint firstAttribute="trailing" secondItem="HkQ-Fq-7LG" secondAttribute="trailing" id="Dhr-Oa-fYF"/>
+                <constraint firstItem="HkQ-Fq-7LG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JrX-3R-pB1"/>
+                <constraint firstItem="nQM-dB-7al" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QXW-U4-9kG"/>
+                <constraint firstItem="NPT-ti-5hV" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ZeJ-sE-KVt"/>
+                <constraint firstItem="NPT-ti-5hV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="afc-FV-2Kn"/>
+                <constraint firstAttribute="bottom" secondItem="nQM-dB-7al" secondAttribute="bottom" id="eYI-f8-eC5"/>
+                <constraint firstAttribute="trailing" secondItem="nQM-dB-7al" secondAttribute="trailing" id="hYp-Fx-2Tf"/>
+            </constraints>
+            <size key="customSize" width="147" height="156"/>
+            <connections>
+                <outlet property="ju_btnAdd" destination="NPT-ti-5hV" id="FyD-9B-jrL"/>
+                <outlet property="ju_btnDelete" destination="HkQ-Fq-7LG" id="gIV-yW-6YC"/>
+                <outlet property="ju_imageView" destination="nQM-dB-7al" id="fbs-1R-pMA"/>
+            </connections>
+            <point key="canvasLocation" x="28" y="-35"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="addAudio" width="34" height="34"/>
+        <image name="deleteImage" width="26" height="26"/>
+    </resources>
+</document>
